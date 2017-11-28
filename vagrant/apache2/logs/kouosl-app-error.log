@@ -1,0 +1,3 @@
+[Tue Nov 28 13:36:41.481568 2017] [authz_core:error] [pid 7111] [client 192.168.83.1:52370] AH01630: client denied by server configuration: /app/
+[Tue Nov 28 13:36:52.119397 2017] [authz_core:error] [pid 7112] [client 192.168.83.1:52372] AH01630: client denied by server configuration: /app/admin
+[Tue Nov 28 13:36:59.113252 2017] [authz_core:error] [pid 7113] [client 192.168.83.1:52373] AH01630: client denied by server configuration: /app/admin
