@@ -8,13 +8,16 @@ $params = array_merge(
 );
 
 $config = [
-    'id' => 'app-api',
+    'id' => 'api',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'api\controllers',
     'bootstrap' => ['log'],
     'modules' => [
         'v1' => [
             'class' => 'api\modules\v1\Module'   // here is our v1 modules
+        ],
+        'sample' => [
+            'class' => 'kouosl\sample\Module'   // here is our v1 modules
         ],
     ],
     'components' => [
