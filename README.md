@@ -18,7 +18,7 @@ Daha sonra proje klon dizinine geçiş yapıp composer ile bağımlılıkların�
 Proje bağımlılıkları indirildikten sonra ilk kullanıma hazır hale getirmek için,
 
    ```
-   php init --env=Production --overwrite=All
+   php init --env=Development --overwrite=All
    ```
    
 Init işlemi bittiminden sonra veritabanı oluşturulur ve veritabanı bağlantı ayarları common/config/main-local.php dosyasına yazılır
@@ -70,7 +70,7 @@ http://kouosl-app.dev/api yazıldığında ise de api ye erişim sağlanmaktadı
    
    ```bash
    git clone https://github.com/kouosl/app.git kouosl-app
-   cd yii2-app-advanced/vagrant/config
+   cd kouosl-app/vagrant/config
    cp vagrant-local.example.yml vagrant-local.yml
    ```
    
