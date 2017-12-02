@@ -63,15 +63,13 @@ http://kouosl-app.dev/api yazıldığında ise de api ye erişim sağlanmaktadı
 
 ## Vagrant ile Yükleme
 
-####  Linux/Unix makinalar için
-
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads) Yüklemesi
 2. [Vagrant](https://www.vagrantup.com/downloads.html) Yüklemesi
 3. GitHub [personal API token](https://github.com/blog/1509-personal-api-tokens) Oluşturulması
 3. Projenin indirilmesi:
    
    ```bash
-   git clone https://github.com/yiisoft/yii2-app-advanced.git
+   git clone https://github.com/kouosl/app.git kouosl-app
    cd yii2-app-advanced/vagrant/config
    cp vagrant-local.example.yml vagrant-local.yml
    ```
@@ -80,7 +78,7 @@ http://kouosl-app.dev/api yazıldığında ise de api ye erişim sağlanmaktadı
 5. Proje dizinine tekrar gelin
 
    ```bash
-   cd yii2-app-advanced
+   cd kouosl-app
    ```
 
 5. Vagrant makinayı çalıştırın
@@ -89,38 +87,6 @@ http://kouosl-app.dev/api yazıldığında ise de api ye erişim sağlanmaktadı
    vagrant up
    ```
    
-Vagrant makina kurulumu tamamlandıktan sonra
-* frontend: http://kouosl-app.dev
-* backend: http://kouosl-app.dev/admin
-* api: http://kouosl-app.dev/api
-
-ile erişilebilir
-   
-#### Windows makinalar için
-
-1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads) Yüklemesi
-2. [Vagrant](https://www.vagrantup.com/downloads.html) Yüklemesi
-3. Makinayı tekrar başlatın
-4. GitHub [personal API token](https://github.com/blog/1509-personal-api-tokens) Oluşturulması
-5. Projenin indirilmesi:
-    ```bash
-      git clone https://github.com/yiisoft/yii2-app-advanced.git
-      cd yii2-app-advanced/vagrant/config
-    ```
-   * copy `vagrant-local.example.yml` to `vagrant-local.yml`
-
-6.  GitHub personal API tokenı `vagrant-local.yml` dosyasındaki yerine yapıştırın.
-7. Proje dizinine tekrar gelin
-
-   ```bash
-   cd yii2-app-advanced
-   ```
-
-8. Vagrant makinayı çalıştırın
-
-   ```bash
-   vagrant up
-   ```
    
 Vagrant makina kurulumu tamamlandıktan sonra
 * frontend: http://kouosl-app.dev
@@ -129,3 +95,12 @@ Vagrant makina kurulumu tamamlandıktan sonra
 
 ile erişilebilir
 
+Cmd ile makinaya SSH erişimi için
+   ```bash
+   vagrant ssh
+   ```
+   
+Hariçi bir programla ssh bağlantısı için bilgiler
+* ip : 192.168.83.137
+* user : vagrant
+* password : vagrant
