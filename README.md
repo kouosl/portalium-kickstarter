@@ -109,12 +109,12 @@ Vagrant makina kurulumu tamamlandıktan sonra aşağıdaki bağlantılardan uygu
 * backend: http://kouosl-app.dev/admin
 * api: http://kouosl-app.dev/api
 
-Cmd ile makinaya SSH erişimi için
+Terminal'den (komut satırı) sanal makinaya SSH erişimi için;
     ```bash
     vagrant ssh
     ```
    
-Hariçi bir programla (putty vb.) ssh bağlantısı için bilgiler:
+Hariçi bir programla (putty vb.) ssh bağlantısı için bilgiler;
 * ip : 192.168.83.137
 * user : vagrant
 * password : vagrant
