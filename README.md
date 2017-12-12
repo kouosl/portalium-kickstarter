@@ -3,26 +3,22 @@ Kurulum
 
 ## Yerel Makine
 
-Sırasıyla aşağıdaki yazılımlar kurulmalıdır.
+Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
 
 1. Apache, Php, MySQL, PhpMyAdmin (XAMMP, WAMP vb.)
 2. Composer (getcomposer.org)
 3. Git (git-scm.com)
+4. GitHub [personal API token](https://github.com/blog/1509-personal-api-tokens)
 
 Apache sunucusu DocumentRoot (XAMMP => c:\xammp\htdocs, WAMP => c:\wamp\www) dizini içerisinde yönetici yetkileriyle terminal (komut satırı) açılarak aşağıdaki direktifler uygulanmalıdır.
    ```
-   git clone https://github.com/kouosl/app.git kouosl-app
-   ```
-
-Proje klon dizinine geçiş yapıpılarak composer eklentileri ve proje bağımlılıkları indirilmelidir.
-   ```
+   git clone https://github.com/kouosl/portal.git kouosl-app
    cd kouosl-app
    composer global require "fxp/composer-asset-plugin:^1.3.0"
    composer update
    ```
 
-Proje bağımlılıkları "kouosl-app/vendor" dizini altında yüklenecektir. 
-Yükleme teyit edildikten sonra aşağıdaki direktifler ile Development (geliştirme) modunda proje ayar dosyaları oluşturulur ve yetkileri düzenlenir.
+Proje bağımlılıkları "kouosl-app/vendor" dizini altında yüklenecektir. Bu adımda sistem github api token talep edecektir. Başlangıçta üretilen token terminale kopyalanarak yapıştırılmalıdır. Yapıştırıldığında gizlilik nedeniyle token gözükmeyecektir. Onaylayarak (Enter) devam edilmelidir. Yükleme teyit edildikten sonra aşağıdaki direktifler ile Development (geliştirme) modunda proje ayar dosyaları oluşturulur ve yetkileri düzenlenir.
    ```
    php init --env=Development --overwrite=All
    ```
@@ -43,6 +39,7 @@ Proje kurulumundan sonra apachenin vhost dosyasının sonuna aşağıdaki direkt
 
     - XAMMP => `c:/xammp/htdocs`
     - WAMP  => `c:/wamp/www`
+   
    ```
     ...
     NameVirtualHost *:80
@@ -51,12 +48,12 @@ Proje kurulumundan sonra apachenin vhost dosyasının sonuna aşağıdaki direkt
        ServerName kouosl-app.dev
        
        ServerAdmin webmaster@localhost
-       DocumentRoot "/$DocumentRoot/kouosl-app"
+       DocumentRoot "$DocumentRoot/kouosl-app"
        
-       ErrorLog /logs/kouosl-error.log
-       CustomLog /logs/kouosl.log combined	
+       ErrorLog logs/kouosl-error.log
+       CustomLog logs/kouosl.log combined	
        
-       <Directory "/$DocumentRoot/kouosl-app">
+       <Directory "$DocumentRoot/kouosl-app">
             AllowOverride All
        </Directory>
    </VirtualHost>
@@ -66,6 +63,7 @@ Yerel makine üzerinde kouosl-app.dev şeklinde erişim için hosts dosyasına g
 
    - Windows: `c:\Windows\System32\Drivers\etc\hosts`
    - Linux: `/etc/hosts`
+
 ```
 127.0.0.1   kouosl-app.dev
 ```
@@ -81,7 +79,7 @@ Sırasıyla aşağıdaki yazılımlar kurulmalıdır.
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (Son Sürüm)
 2. [Vagrant](https://www.vagrantup.com/downloads.html) (Son sürüm)
 3. GitHub [personal API token](https://github.com/blog/1509-personal-api-tokens) Oluşturulması
-3. Yönetici yetkileriyle terminal (komut satırı) açılarak aşağıdaki direktifler uygulanmalıdır.
+4. Yönetici yetkileriyle terminal (komut satırı) açılarak aşağıdaki direktifler uygulanmalıdır.
    
    ```bash
    vagrant plugin install vagrant-hostmanager
