@@ -5,7 +5,7 @@ Kurulum
 
 Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
 
-1. Apache, Php, MySQL, PhpMyAdmin (XAMMP, WAMP vb.)
+1. Apache, Php, MySQL, PhpMyAdmin ([XAMMP](apachefriends.org), [WAMP](wampserver.com) vb.)
 2. [Composer] (getcomposer.org)
 3. [Git] (git-scm.com)
 4. [GitHub API token](https://github.com/blog/1509-personal-api-tokens)
@@ -84,7 +84,7 @@ Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
    
    ```bash
    vagrant plugin install vagrant-hostmanager
-   git clone https://github.com/kouosl/app.git kouosl-app
+   git clone https://github.com/kouosl/portal.git kouosl-app
    ```
 
 5. Aşağıdaki diinde bulunan vagrant-local.example.yml dosyasının vagrant-local.yml adıyla kopyası oluşturulmalıdır. 
