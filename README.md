@@ -100,7 +100,7 @@ github_token: qy6uuqııq8ııqooqwuw78qııqowksjjeoow9oowlw
 ....
 ```
 
-8. Vagrant makinayı çalıştırın
+8. Vagrant makina çalıştırılarak kurulum başlatlır.
 ```bash
 vagrant up
 ```
