@@ -68,9 +68,10 @@ Yerel makine üzerinde kouosl-app.dev şeklinde erişim için hosts dosyasına g
 127.0.0.1   kouosl-app.dev
 ```
 
-Tarayıcıya http://kouosl-app.dev yazıldığı zaman projenin önyüz(frontend), 
-http://kouosl-app.dev/admin yazıldığı zaman ise yönetim paneli (backend),
-http://kouosl-app.dev/api yazıldığında ise de api ye erişim sağlanmaktadır.
+Kurulumu tamamlandıktan sonra aşağıdaki bağlantılardan uygulamaya erişilebilir.
+* frontend: http://kouosl-app.dev
+* backend: http://kouosl-app.dev/admin
+* api: http://kouosl-app.dev/api
 
 ## Sanal Makine (Vagrant)
 
