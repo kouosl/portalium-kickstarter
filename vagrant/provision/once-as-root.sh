@@ -49,6 +49,8 @@ echo "Done!"
 
 info "Configure apache2"
 sed -i 's/user www-data/user vagrant/g' /etc/apache2/apache2.conf
+sed -i 's/group www-data/group vagrant/g' /etc/apache2/apache2.conf
+sed -i 's/owner www-data/owner vagrant/g' /etc/apache2/apache2.conf
 echo "Done!"
 
 info "Enabling site configuration"
@@ -59,8 +61,8 @@ echo "Done!"
 a2enmod rewrite
 
 info "Initailize databases for MySQL"
-mysql -uroot <<< "CREATE DATABASE yii2advanced"
-mysql -uroot <<< "CREATE DATABASE yii2advanced_test"
+mysql -uroot <<< "CREATE DATABASE kouosl"
+mysql -uroot <<< "CREATE DATABASE kouosl_test"
 echo "Done!"
 
 info "Install composer"

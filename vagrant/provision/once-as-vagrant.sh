@@ -28,7 +28,7 @@ cd /app
 composer --no-progress --prefer-dist install
 
 info "Init project"
-php init --env=Development --overwrite=y
+php init --env=Development --overwrite=All
 
 info "Apply migrations"
 php yii migrate --migrationPath=@vendor/kouosl/user/migrations --interactive=0

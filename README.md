@@ -6,9 +6,9 @@ Kurulum
 Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
 
 1. Apache, Php, MySQL, PhpMyAdmin (XAMMP, WAMP vb.)
-2. Composer (getcomposer.org)
-3. Git (git-scm.com)
-4. GitHub [personal API token](https://github.com/blog/1509-personal-api-tokens)
+2. [Composer] (getcomposer.org)
+3. [Git] (git-scm.com)
+4. [GitHub API token](https://github.com/blog/1509-personal-api-tokens)
 
 Apache sunucusu DocumentRoot (XAMMP => c:\xammp\htdocs, WAMP => c:\wamp\www) dizini içerisinde yönetici yetkileriyle terminal (komut satırı) açılarak aşağıdaki direktifler uygulanmalıdır.
    ```
@@ -25,7 +25,7 @@ Proje bağımlılıkları "kouosl-app/vendor" dizini altında yüklenecektir. Bu
 
 Boş bir veritabanı oluşturulmalıdır. Veritabanı terminal veya http://localhost/phpmyadmin adresinden erişilebilen web tabanlı veritabanı yönetim sistemi ile oluşturulabilir. Oluşturulan veritabanına ait veriler aşağıdaki ayar dosyasında tanımlanmalıdır.
    ```
-   kouosl-app/common/config/main-local.php 
+   @kouosl-app/common/config/main-local.php 
    ```
 
 Veritabanı ayarları düzenlendikten sonra migration (veritabanı aktarım) işlemleri gerçekleştirilmelidir.
@@ -34,8 +34,8 @@ Veritabanı ayarları düzenlendikten sonra migration (veritabanı aktarım) iş
    php yii migrate --migrationPath=@vendor/kouosl/sample/migrations --interactive=0
    ```
 
-Apache sunucusunun  @apache_kurulum_dizini/conf/extra/ dizini altındaki ilgili vhosts dosyası
-Proje kurulumundan sonra apachenin vhost dosyasının sonuna aşağıdaki direktifler eklenerek apache tekrar başlatılmalıdır. "$DocumentRoot" bölümüne apache server kök dizinini yazınız.
+Apache sunucusunun dizini altındaki httpd-vhosts.conf dosyası
+Proje kurulumundan sonra apachenin vhost dosyasında "NameVirtualHost *:80" ifadesinin yorum satırı kaldırılmalı ve  sonuna aşağıdaki direktifler eklenerek apache tekrar başlatılmalıdır. VirtualHost ayarlarında "$DocumentRoot" bölümüne apache server kök dizini yazılmalıdır.
 
     - XAMMP => `c:/xammp/htdocs`
     - WAMP  => `c:/wamp/www`
@@ -74,21 +74,25 @@ http://kouosl-app.dev/api yazıldığında ise de api ye erişim sağlanmaktadı
 
 ## Sanal Makine (Vagrant)
 
-Sırasıyla aşağıdaki yazılımlar kurulmalıdır.
+Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
 
-1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads) (Son Sürüm)
-2. [Vagrant](https://www.vagrantup.com/downloads.html) (Son sürüm)
-3. GitHub [personal API token](https://github.com/blog/1509-personal-api-tokens) Oluşturulması
+1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+2. [Vagrant](https://www.vagrantup.com/downloads.html)
+3. [Git](git-scm.com)
+3. [GitHub API token](https://github.com/blog/1509-personal-api-tokens)
 4. Yönetici yetkileriyle terminal (komut satırı) açılarak aşağıdaki direktifler uygulanmalıdır.
    
    ```bash
    vagrant plugin install vagrant-hostmanager
    git clone https://github.com/kouosl/app.git kouosl-app
-   cd kouosl-app/vagrant/config
-   cp vagrant-local.example.yml vagrant-local.yml
    ```
-   
-4. GitHub personal API tokenı `vagrant-local.yml` dosyasındaki yerine yapıştırın.
+
+5. Aşağıdaki diinde bulunan vagrant-local.example.yml dosyasının vagrant-local.yml adıyla kopyası oluşturulmalıdır. 
+    ```
+   @kouosl-app/vagrant/config
+   ```
+
+4. GitHub api tokenı `vagrant-local.yml` dosyasında aşağıdaki şekilde tanımlanmalıdır.
     ```
     ....
     github_token: qy6uuqııq8ııqooqwuw78qııqowksjjeoow9oowlw
