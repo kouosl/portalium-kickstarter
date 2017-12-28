@@ -6,8 +6,8 @@ Kurulum
 Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
 
 1. Apache, Php, MySQL, PhpMyAdmin ([XAMMP](apachefriends.org), [WAMP](wampserver.com) vb.)
-2. [Composer](getcomposer.org)
-3. [Git](git-scm.com)
+2. [Composer](https://getcomposer.org/)
+3. [Git](https://git-scm.com/)
 4. [GitHub API token](https://github.com/blog/1509-personal-api-tokens)
 
 Apache sunucusu DocumentRoot (XAMMP => c:\xammp\htdocs, WAMP => c:\wamp\www) dizini içerisinde yönetici yetkileriyle terminal (komut satırı) açılarak aşağıdaki direktifler uygulanmalıdır.
