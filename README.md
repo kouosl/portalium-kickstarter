@@ -5,7 +5,7 @@ Kurulum
 
 Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
 
-1. Apache, Php, MySQL, PhpMyAdmin ([XAMMP](apachefriends.org), [WAMP](wampserver.com) vb.)
+1. Apache, Php, MySQL, PhpMyAdmin ([XAMMP](https://www.apachefriends.org), [WAMP](http://www.wampserver.com/en/) vb.)
 2. [Composer](https://getcomposer.org/)
 3. [Git](https://git-scm.com/)
 4. [GitHub API token](https://github.com/blog/1509-personal-api-tokens)
