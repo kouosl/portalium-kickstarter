@@ -24,7 +24,7 @@ info "Install plugins for composer"
 composer global require "fxp/composer-asset-plugin:^1.3.1" --no-progress
 
 info "Install project dependencies"
-cd /app
+cd /var/www/portal
 composer --no-progress --prefer-dist install
 
 info "Init project"
@@ -33,10 +33,6 @@ php init --env=Development --overwrite=All
 info "Apply migrations"
 php yii migrate --migrationPath=@vendor/kouosl/user/migrations --interactive=0
 php yii migrate --migrationPath=@vendor/kouosl/sample/migrations --interactive=0
-php yii_test migrate --interactive=0
-
-info "Create bash-alias 'app' for vagrant user"
-echo 'alias app="cd /var/www/portal"' | tee /home/vagrant/.bash_aliases
 
 info "Enabling colorized prompt for guest console"
 sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/" /home/vagrant/.bashrc
