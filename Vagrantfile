@@ -2,9 +2,9 @@ require 'yaml'
 require 'fileutils'
 
 domains = {
-  frontend: 'localhost',
-  backend:  'localhost/admin',
-  api:  'localhost/api'
+  frontend: 'portal.kouosl',
+  backend:  'portal.kouosl/admin',
+  api:  'portal.kouosl/api'
 }
 
 config = {
@@ -50,7 +50,10 @@ Vagrant.configure(2) do |config|
   config.vm.network 'private_network', ip: options['ip']
 
   # sync: folder 'portal' (host machine) -> folder '/var/www/portal' (guest machine)
-  config.vm.synced_folder './', '/var/www/portal', owner: 'vagrant', group: 'vagrant'
+  config.vm.synced_folder './', '/var/www/portal', id: "vagrant-root",
+    owner: "vagrant",
+    group: "www-data",
+    mount_options: ["dmode=775,fmode=664"]
 
   # disable folder '/vagrant' (guest machine)
   config.vm.synced_folder '.', '/vagrant', disabled: true

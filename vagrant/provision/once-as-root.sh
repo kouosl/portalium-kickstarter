@@ -31,20 +31,15 @@ apt-get update
 apt-get upgrade -y
 
 info "Install additional software"
-apt-get install -y apache2 php7.0-curl php7.0-cli php7.0-intl php7.0-mysqlnd php7.0-gd php7.0-fpm php7.0-mbstring php7.0-xml unzip  mysql-server-5.7 libapache2-mod-php7.0
+apt-get install -y mariadb-server mariadb-client apache2 php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext git nano unzip curl
+apt-get -y install phpmyadmin --no-install-recommends
+apt-get clean
 
-info "Configure MySQL"
-sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
+info "Configure MariaDB"
 mysql -uroot <<< "CREATE USER 'root'@'%' IDENTIFIED BY ''"
 mysql -uroot <<< "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'"
 mysql -uroot <<< "DROP USER 'root'@'localhost'"
 mysql -uroot <<< "FLUSH PRIVILEGES"
-echo "Done!"
-
-info "Configure PHP-FPM"
-sed -i 's/user = www-data/user = vagrant/g' /etc/php/7.0/fpm/pool.d/www.conf
-sed -i 's/group = www-data/group = vagrant/g' /etc/php/7.0/fpm/pool.d/www.conf
-sed -i 's/owner = www-data/owner = vagrant/g' /etc/php/7.0/fpm/pool.d/www.conf
 echo "Done!"
 
 info "Configure apache2"
@@ -54,10 +49,14 @@ sed -i 's/owner www-data/owner vagrant/g' /etc/apache2/apache2.conf
 echo "Done!"
 
 info "Enabling site configuration"
+rm -rf /var/www/html
+rm /etc/apache2/sites-available/000-default.conf
 ln -s /var/www/portal/vagrant/apache2/vhost.conf /etc/apache2/sites-available/000-default.conf
+ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
+sed -i '/AllowNoPassword/s/^    \/\///g' /etc/phpmyadmin/config.inc.php
 echo "Done!"
 
-
+a2enmod php7.0
 a2enmod rewrite
 
 info "Initailize databases for MySQL"

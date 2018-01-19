@@ -27,7 +27,8 @@ RUN apt-get update && apt-get install -y \
     php-gettext \
     git \
     composer \
-    nano
+    nano \
+    unzip
 
 RUN apt-get -y install phpmyadmin --no-install-recommends
 RUN apt-get clean
