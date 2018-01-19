@@ -2,9 +2,9 @@ require 'yaml'
 require 'fileutils'
 
 domains = {
-  frontend: 'kouosl-app.dev',
-  backend:  'kouosl-app.dev/admin',
-  api:  'kouosl-app.dev/api'
+  frontend: 'localhost',
+  backend:  'localhost/admin',
+  api:  'localhost/api'
 }
 
 config = {
@@ -19,7 +19,7 @@ options = YAML.load_file config[:local]
 
 # check github token
 if options['github_token'].nil? || options['github_token'].to_s.length != 40
-  puts "You must place REAL GitHub token into configuration:\n/yii2-app-advanced/vagrant/config/vagrant-local.yml"
+  puts "You must place REAL GitHub token into configuration:\n/portal/vagrant/config/vagrant-local.yml"
   exit
 end
 
@@ -49,8 +49,8 @@ Vagrant.configure(2) do |config|
   # network settings
   config.vm.network 'private_network', ip: options['ip']
 
-  # sync: folder 'yii2-app-advanced' (host machine) -> folder '/app' (guest machine)
-  config.vm.synced_folder './', '/app', owner: 'vagrant', group: 'vagrant'
+  # sync: folder 'portal' (host machine) -> folder '/var/www/portal' (guest machine)
+  config.vm.synced_folder './', '/var/www/portal', owner: 'vagrant', group: 'vagrant'
 
   # disable folder '/vagrant' (guest machine)
   config.vm.synced_folder '.', '/vagrant', disabled: true

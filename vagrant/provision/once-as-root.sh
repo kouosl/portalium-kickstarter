@@ -54,7 +54,7 @@ sed -i 's/owner www-data/owner vagrant/g' /etc/apache2/apache2.conf
 echo "Done!"
 
 info "Enabling site configuration"
-ln -s /app/vagrant/apache2/app.conf /etc/apache2/sites-enabled/app.conf
+ln -s /var/www/portal/vagrant/apache2/vhost.conf /etc/apache2/sites-available/000-default.conf
 echo "Done!"
 
 
@@ -62,7 +62,6 @@ a2enmod rewrite
 
 info "Initailize databases for MySQL"
 mysql -uroot <<< "CREATE DATABASE kouosl"
-mysql -uroot <<< "CREATE DATABASE kouosl_test"
 echo "Done!"
 
 info "Install composer"
