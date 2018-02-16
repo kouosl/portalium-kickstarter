@@ -45,7 +45,7 @@ Proje kurulumundan sonra apachenin vhost dosyasında "NameVirtualHost *:80" ifad
 NameVirtualHost *:80
 ...
 <VirtualHost *:80>
-    ServerName portal.dev
+    ServerName portal.kouosl
        
     ServerAdmin webmaster@localhost
     DocumentRoot "$DocumentRoot/portal"
@@ -59,13 +59,13 @@ NameVirtualHost *:80
 </VirtualHost>
 ```
 
-Yerel makine üzerinde portal.dev şeklinde erişim için hosts dosyasına geliştirme alan adı tanımlanmalıdır.
+Yerel makine üzerinde portal.kouosl şeklinde erişim için hosts dosyasına geliştirme alan adı tanımlanmalıdır.
 
 - Windows: `c:\Windows\System32\Drivers\etc\hosts`
 - Linux: `/etc/hosts`
 
 ```
-127.0.0.1   portal.dev
+127.0.0.1   portal.kouosl
 ```
 
 Kurulumu tamamlandıktan sonra aşağıdaki bağlantılardan uygulamaya erişilebilir.
