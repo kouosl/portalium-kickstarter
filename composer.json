@@ -44,8 +44,7 @@
         "kouosl/theme": "dev-develop",
         "kouosl/site": "dev-develop",
         "kouosl/user": "dev-develop",
-        "kouosl/sample": "dev-develop",
-        "himiklab/yii2-recaptcha-widget": "*"
+        "kouosl/sample": "dev-develop"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
