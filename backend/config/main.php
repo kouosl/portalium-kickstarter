@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'defaultRoute' => 'site/site/index',
+    'defaultRoute' => 'site/auth/index',
     'modules' => [
         'site' => [
             'class' => 'kouosl\site\Module'   // here is our v1 modules
@@ -38,7 +38,7 @@ return [
         'user' => [
             'identityClass' => 'kouosl\user\models\User',
             'enableAutoLogin' => true,
-            'loginUrl' => ['site/site/login'],
+            'loginUrl' => ['site/auth/login'],
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
         'session' => [
@@ -55,7 +55,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/site/error',
+            'errorAction' => 'site/auth/error',
         ],
         'view' => [
             'class' => 'kouosl\base\components\View',

@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'defaultRoute' => 'site/site/index',
+    'defaultRoute' => 'site/auth/index',
     'modules' => [
         'site' => [
             'class' => 'kouosl\site\Module'   // here is our v1 modules
@@ -65,7 +65,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/site/error',
+            'errorAction' => 'site/auth/error',
         ],
 
        
