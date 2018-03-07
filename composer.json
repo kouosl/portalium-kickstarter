@@ -33,6 +33,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/kouosl/sample.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kouosl/menu.git"
         }
     ],
     "require": {
@@ -44,7 +48,8 @@
         "kouosl/theme": "dev-develop",
         "kouosl/site": "dev-develop",
         "kouosl/user": "dev-develop",
-        "kouosl/sample": "dev-develop"
+        "kouosl/sample": "dev-develop",
+        "kouosl/menu": "dev-develop"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

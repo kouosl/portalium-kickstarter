@@ -16,6 +16,9 @@ return [
         'site' => [
             'class' => 'kouosl\site\Module'   // here is our v1 modules
         ],
+        'menu' => [
+            'class' => 'kouosl\menu\Module',
+            ],
         'user' => [
             'class' => 'kouosl\user\Module'   // here is our v1 modules
         ],

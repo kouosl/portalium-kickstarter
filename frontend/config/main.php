@@ -16,6 +16,9 @@ return [
         'site' => [
             'class' => 'kouosl\site\Module'   // here is our v1 modules
         ],
+        'menu' => [
+            'class' => 'kouosl\menu\Module',
+        ],
         'user' => [
             'class' => 'kouosl\user\Module'   // here is our v1 modules
         ],
@@ -38,6 +41,7 @@ return [
         'user' => [
             'identityClass' => 'kouosl\user\models\User',
             'enableAutoLogin' => true,
+            'loginUrl'=>['site/auth/login'],
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],
         'session' => [
