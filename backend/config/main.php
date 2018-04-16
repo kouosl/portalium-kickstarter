@@ -11,11 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'defaultRoute' => 'site/auth/index',
+    'defaultRoute' => 'site/auth/home',
     'modules' => [
         'site' => [
             'class' => 'kouosl\site\Module'   // here is our v1 modules
-        ],
+        ], 
         'menu' => [
             'class' => 'kouosl\menu\Module',
             ],
