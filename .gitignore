@@ -38,3 +38,10 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+
+
+# edit
+/.vscode
+/.idea
+Dockerfile
+Vagrantfile

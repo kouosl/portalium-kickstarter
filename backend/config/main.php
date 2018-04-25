@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'defaultRoute' => 'site/auth/home',
+    'defaultRoute' => 'site/home',
     'modules' => [
         'site' => [
             'class' => 'kouosl\site\Module'   // here is our v1 modules
