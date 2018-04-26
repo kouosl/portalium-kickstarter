@@ -33,6 +33,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/kouosl/sample.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kouosl/menu.git"
         }
     ],
     "require": {
@@ -40,11 +44,12 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "kouosl/base": "dev-master",
-        "kouosl/theme": "dev-master",
-        "kouosl/site": "dev-master",
-        "kouosl/user": "dev-master",
-        "kouosl/sample": "dev-master"
+        "kouosl/base": "dev-develop",
+        "kouosl/theme": "dev-develop",
+        "kouosl/site": "dev-develop",
+        "kouosl/user": "dev-develop",
+        "kouosl/sample": "dev-develop",
+        "kouosl/menu": "dev-develop"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
