@@ -16,27 +16,27 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/kouosl/base.git"
+            "url": "https://github.com/kouosl/portal-base.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/kouosl/theme.git"
+            "url": "https://github.com/kouosl/portal-theme.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/kouosl/site.git"
+            "url": "https://github.com/kouosl/portal-site.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/kouosl/user.git"
+            "url": "https://github.com/kouosl/portal-user.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/kouosl/sample.git"
+            "url": "https://github.com/kouosl/portal-sample.git"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/kouosl/menu.git"
+            "url": "https://github.com/kouosl/portal-menu.git"
         }
     ],
     "require": {
@@ -44,12 +44,12 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "kouosl/base": "dev-develop",
-        "kouosl/theme": "dev-develop",
-        "kouosl/site": "dev-develop",
-        "kouosl/user": "dev-develop",
-        "kouosl/sample": "dev-develop",
-        "kouosl/menu": "dev-develop"
+        "kouosl/portal-base": "dev-develop",
+        "kouosl/portal-theme": "dev-develop",
+        "kouosl/portal-site": "dev-develop",
+        "kouosl/portal-user": "dev-develop",
+        "kouosl/portal-sample": "dev-develop",
+        "kouosl/portal-menu": "dev-develop"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
