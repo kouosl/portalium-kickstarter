@@ -44,12 +44,12 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "kouosl/portal-base": "dev-develop",
-        "kouosl/portal-theme": "dev-develop",
-        "kouosl/portal-site": "dev-develop",
-        "kouosl/portal-user": "dev-develop",
-        "kouosl/portal-sample": "dev-develop",
-        "kouosl/portal-menu": "dev-develop"
+        "kouosl/base": "dev-develop",
+        "kouosl/theme": "dev-develop",
+        "kouosl/site": "dev-develop",
+        "kouosl/user": "dev-develop",
+        "kouosl/sample": "dev-develop",
+        "kouosl/menu": "dev-develop"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
