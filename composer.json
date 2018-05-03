@@ -37,6 +37,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/kouosl/portal-menu.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kouosl/portal-gii.git"
         }
     ],
     "require": {
@@ -55,7 +59,7 @@
         "yiisoft/yii2-debug": "~2.0.0",
         "yiisoft/yii2-gii": "~2.0.0",
         "yiisoft/yii2-faker": "~2.0.0",
-
+        "kouosl/portal-gii": "dev-develop",
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1"
     },
