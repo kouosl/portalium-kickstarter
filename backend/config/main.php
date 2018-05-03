@@ -64,10 +64,10 @@ return [
             'class' => 'kouosl\base\components\View',
             'theme' => [
                 'pathMap' => [
-                    '@app/views' => '@vendor/kouosl/theme',
-                    '@app/modules' => '@vendor/kouosl/theme/views/',
+                    '@app/views' => '@vendor/kouosl/portal-theme',
+                    '@app/modules' => '@vendor/kouosl/portal-theme/views/',
                 ],
-                'baseUrl' => '@vendor/kouosl/theme',
+                'baseUrl' => '@vendor/kouosl/portal-theme',
             ],
 
         ],
