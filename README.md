@@ -1,6 +1,9 @@
 Kurulum
 ============
 
+## Ubuntu Kullanıcıları
+autoSetup dosyasından otomatik kurulum yapabilir.
+
 ## Yerel Makine
 
 Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
