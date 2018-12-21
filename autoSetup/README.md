@@ -7,7 +7,7 @@ Otomatik Kurulum (Ubuntu 18.04)
 2. Oluşturulan token bilgisayara istenilen konumda istenilen isimde .txt uzantılı olarak kayıt edilmedilir (.txt içinde sadece key olması gerekli)
 3. Kurulum için kouslPortal.sh doyası ve Github api token'i kaydettiğiniz dosyanın konumu gereklidir.
 
-## Kurulum için
+## Örnek Kurulum
 
 github api key'i key.txt olarak /home/UserName/Desktop/key.txt konumuna kaydettiyseniz aşağıdaki komutu kouslPortal.sh dosyasının bulunduğu konumda çalıştırmanız yeterli olucaktır.
 
