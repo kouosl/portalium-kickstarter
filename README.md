@@ -1,6 +1,10 @@
 Kurulum
 ============
 
+## Ubuntu Kullanıcıları için
+Aşağıdaki linki takip ederek otomatik kurulum yapabilirsiniz.
+https://gist.github.com/ahmetbaranyilmaz/1797dd519fc6442e51665589cabf9631
+
 ## Yerel Makine
 
 Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
