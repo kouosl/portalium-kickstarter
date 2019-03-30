@@ -31,8 +31,9 @@ info "Init project"
 php init --env=Development --overwrite=All
 
 info "Apply migrations"
-php yii migrate --migrationPath=@vendor/kouosl/user/migrations --interactive=0
-php yii migrate --migrationPath=@vendor/kouosl/sample/migrations --interactive=0
+php yii migrate --migrationPath=@vendor/kouosl/portal-user/migrations --interactive=0
+php yii migrate --migrationPath=@vendor/kouosl/portal-site/migrations --interactive=0
+php yii migrate --migrationPath=@vendor/kouosl/portal-content/migrations --interactive=0
 
 info "Enabling colorized prompt for guest console"
 sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/" /home/vagrant/.bashrc

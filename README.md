@@ -79,7 +79,7 @@ Sırasıyla aşağıdaki yazılımlar kurulmalı ve github token üretilmelidir.
 
 1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. [Vagrant](https://www.vagrantup.com/downloads.html)
-3. [Git](git-scm.com)
+3. [Git](https://www.git-scm.com)
 4. [GitHub API token](https://github.com/settings/tokens) Generate new token'a tıklayarak yeni bir token oluşturulmalıdır. 
 5. Yönetici yetkileriyle terminal (komut satırı) açılarak aşağıdaki direktifler uygulanmalıdır.
    

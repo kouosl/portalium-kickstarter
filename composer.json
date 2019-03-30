@@ -32,15 +32,15 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/kouosl/portal-sample.git"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/kouosl/portal-menu.git"
         },
         {
             "type": "vcs",
             "url": "https://github.com/kouosl/portal-gii.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kouosl/portal-content.git"
         }
     ],
     "require": {
@@ -52,8 +52,8 @@
         "kouosl/portal-theme": "dev-develop",
         "kouosl/portal-site": "dev-develop",
         "kouosl/portal-user": "dev-develop",
-        "kouosl/portal-sample": "dev-develop",
-        "kouosl/portal-menu": "dev-develop"
+        "kouosl/portal-menu": "dev-develop",
+        "kouosl/portal-content": "dev-develop"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
