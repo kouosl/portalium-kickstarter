@@ -13,11 +13,8 @@ $config = [
     'controllerNamespace' => 'api\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-        'v1' => [
-            'class' => 'api\modules\v1\Module'   // here is our v1 modules
-        ],
-        'sample' => [
-            'class' => 'kouosl\sample\Module'   // here is our v1 modules
+        'site' => [
+            'class' => 'kouosl\site\Module'
         ],
     ],
     'components' => [
