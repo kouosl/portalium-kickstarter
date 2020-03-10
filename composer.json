@@ -34,7 +34,6 @@
         "yiisoft/yii2-gii" : "^2.0",
         "yiisoft/yii2-debug": "~2.0.0"
     },
-    ,
     "extra": {
         "asset-installer-paths": {
             "bower-asset-library": "vendor/bower"
