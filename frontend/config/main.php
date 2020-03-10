@@ -1,63 +1,43 @@
 <?php
-$params = array_merge(
-    require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
-);
-
 return [
     'id' => 'frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'frontend\controllers',
     'defaultRoute' => 'site/home',
     'modules' => [
         'site' => [
-            'class' => 'kouosl\site\Module'   // here is our v1 modules
-        ],
-        'menu' => [
-            'class' => 'kouosl\menu\Module',
+            'class' => 'portalium\site\Module'
         ],
         'user' => [
-            'class' => 'kouosl\user\Module'   // here is our v1 modules
+            'class' => 'portalium\user\Module'
         ],
-        'sample' => [
-            'class' => 'kouosl\sample\Module'   // here is our v1 modules
+        'theme' => [
+            'class' => 'portalium\theme\Module'
         ],
     ],
     'components' => [
         'request' => [
-			// !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'class' => 'portalium\components\Request',
             'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
-            'class' => 'kouosl\base\components\Request',
-            'web'=> '/frontend/web',
             'csrfParam' => '_csrf-frontend',
+            'web'=> '/frontend/web',
+            'aliasUrl' => '/'
         ],
 		 'urlManager' => [
         	'enablePrettyUrl' => true,
         	'showScriptName' => false,
         ],
         'user' => [
-            'identityClass' => 'kouosl\user\models\User',
+            'identityClass' => 'portalium\user\models\User',
             'enableAutoLogin' => true,
             'loginUrl'=>['site/auth/login'],
-            'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+            'identityCookie' => [
+                'name' => '_identity-frontend',
+                'httpOnly' => true
+            ],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the frontend
-            'name' => 'advanced-frontend',
-        ],
-        'view' => [
-            'class' => 'kouosl\base\components\View',
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@vendor/kouosl/portal-theme',
-                    '@app/modules' => '@vendor/kouosl/portal-theme/views/',
-                ],
-                'baseUrl' => '@vendor/kouosl/portal-theme',
-            ],
-
+            'name' => 'portalium-frontend',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -69,11 +49,18 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/auth/error',
+            'errorAction' => 'site/home/error',
         ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@app/views' => '@vendor/portalium/portalium-theme',
+                    '@app/modules' => '@vendor/portalium/portalium-theme/views/',
+                ],
+                'baseUrl' => '@vendor/portalium/portalium-theme',
+            ],
 
-       
+        ],
     ],
     'layout' => 'frontend-main',
-    'params' => $params,
 ];
