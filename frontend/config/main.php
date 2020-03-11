@@ -21,7 +21,7 @@ return [
             'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
             'csrfParam' => '_csrf-frontend',
             'web'=> '/frontend/web',
-            'aliasUrl' => '/'
+            'aliasUrl' => ''
         ],
 		 'urlManager' => [
         	'enablePrettyUrl' => true,
@@ -51,16 +51,8 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/home/error',
         ],
-        'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@vendor/portalium/portalium-theme',
-                    '@app/modules' => '@vendor/portalium/portalium-theme/views/',
-                ],
-                'baseUrl' => '@vendor/portalium/portalium-theme',
-            ],
 
-        ],
     ],
     'layout' => 'frontend-main',
+    'layoutPath' => '@vendor/portalium/portalium-theme/src/layouts'
 ];

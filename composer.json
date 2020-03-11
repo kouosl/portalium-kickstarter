@@ -4,7 +4,6 @@
     "homepage": "http://www.portalium.dev/",
     "type": "portalium-kickstarter",
     "license": "MIT",
-    "minimum-stability": "stable",
     "repositories": [
         {
             "type": "vcs",
@@ -21,6 +20,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/kouosl/portalium-user.git"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -34,14 +37,9 @@
         "yiisoft/yii2-gii" : "^2.0",
         "yiisoft/yii2-debug": "~2.0.0"
     },
-    "extra": {
-        "asset-installer-paths": {
-            "bower-asset-library": "vendor/bower"
-        }
-    },
     "config": {
         "fxp-asset": {
-            "enabled": false
+            "installer-paths": "vendor/bower"
         }
     }
 }

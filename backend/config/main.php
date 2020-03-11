@@ -51,16 +51,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/home/error',
         ],
-        'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@vendor/portalium/portalium-theme',
-                    '@app/modules' => '@vendor/portalium/portalium-theme/views/',
-                ],
-                'baseUrl' => '@vendor/portalium/portalium-theme',
-            ],
-
-        ],
     ],
     'layout' => 'backend-main',
+    'layoutPath' => '@vendor/portalium/portalium-theme/src/layouts'
 ];
