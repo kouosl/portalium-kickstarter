@@ -32,13 +32,12 @@ return [
             'aliasUrl' => '/api'
         ],
         'urlManager' => [
-            'class' => 'kouosl\components\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
 
         ],
         'errorHandler' => [
-            'errorAction' => 'site/default/error',
+            'errorAction' => 'site/home/error',
         ],
     ]
 ];
