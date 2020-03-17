@@ -17,7 +17,7 @@ return [
     ],
     'components' => [
         'request' => [
-            'class' => 'portalium\components\Request',
+            'class' => 'portalium\web\Request',
             'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
             'csrfParam' => '_csrf-backend',
 			'web'=> '/backend/web',

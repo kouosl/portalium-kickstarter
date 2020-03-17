@@ -17,11 +17,11 @@ return [
     ],
     'components' => [
         'request' => [
-            'class' => 'portalium\components\Request',
+            'class' => 'portalium\web\Request',
             'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
             'csrfParam' => '_csrf-frontend',
-            'web'=> '/frontend/web',
-            'aliasUrl' => ''
+            'web' => '/frontend/web',
+            'aliasUrl' => '',
         ],
 		 'urlManager' => [
         	'enablePrettyUrl' => true,

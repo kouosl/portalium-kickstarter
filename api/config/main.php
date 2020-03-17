@@ -27,7 +27,7 @@ return [
         ],
         'request' => [
             'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
-            'class' => 'portalium\components\Request',
+            'class' => 'portalium\web\Request',
             'web'=> '/api/web',
             'aliasUrl' => '/api'
         ],

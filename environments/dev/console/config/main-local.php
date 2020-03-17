@@ -2,7 +2,9 @@
 return [
     'bootstrap' => ['gii'],
     'modules' => [
-        'gii' => 'yii\gii\Module',
-        'allowedIPs' => ['*']
+        'gii' => [
+            'class' => 'yii\gii\Module',
+            'allowedIPs' => ['*']
+        ]
     ],
 ];
