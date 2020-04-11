@@ -24,8 +24,8 @@ return [
             'aliasUrl' => '',
         ],
 		 'urlManager' => [
-        	'enablePrettyUrl' => true,
-        	'showScriptName' => false,
+             'enablePrettyUrl' => true,
+             'showScriptName' => false,
         ],
         'user' => [
             'identityClass' => 'portalium\user\models\User',
