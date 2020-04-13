@@ -22,6 +22,14 @@ return [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => true,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.gmail.com',
+                'username' => '',
+                'password' => '',
+                'port' => '465',
+                'encryption' => 'ssl',
+            ]
         ],
     ],
 ];
