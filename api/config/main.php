@@ -7,11 +7,33 @@ return [
         'site' => [
             'class' => 'portalium\site\Module'
         ],
+        'user' => [
+            'class' => 'portalium\user\Module',
+        ],
     ],
     'components' => [
+        'request' => [
+            'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
+            'csrfParam' => '_csrf-api',
+            'class' => 'portalium\web\Request',
+            'web'=> '/api/web',
+            'aliasUrl' => '/api'
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
+            'showScriptName' => false,
+        ],
         'user' => [
             'identityClass' => 'portalium\user\models\User',
             'enableAutoLogin' => false,
+            'loginUrl' => '',
+            'identityCookie' => [
+                'name' => '_identity-api',
+            ],
+        ],
+        'session' => [
+            'name' => 'portalium-api',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -21,23 +43,6 @@ return [
                     'levels' => ['error', 'warning'],
                 ],
             ],
-        ],
-        'authManager' => [
-            'class' => 'yii\rbac\DbManager',
-        ],
-        'request' => [
-            'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
-            'class' => 'portalium\web\Request',
-            'web'=> '/api/web',
-            'aliasUrl' => '/api'
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/home/error',
         ],
     ]
 ];

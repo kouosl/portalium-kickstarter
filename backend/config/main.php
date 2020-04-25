@@ -10,7 +10,7 @@ return [
         ], 
         'user' => [
             'class' => 'portalium\user\Module',
-            ],
+        ],
         'theme' => [
             'class' => 'portalium\theme\Module'
         ],

@@ -4,7 +4,15 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'console\controllers',
-     'components' => [
+    'modules' => [
+        'site' => [
+            'class' => 'portalium\site\Module'
+        ],
+        'user' => [
+            'class' => 'portalium\user\Module',
+        ],
+    ],
+    'components' => [
         'log' => [
             'targets' => [
                 [
