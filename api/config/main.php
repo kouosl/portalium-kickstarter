@@ -21,7 +21,6 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => false,
             'showScriptName' => false,
         ],
         'user' => [
