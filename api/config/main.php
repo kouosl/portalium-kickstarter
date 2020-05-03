@@ -13,7 +13,7 @@ return [
     ],
     'components' => [
         'request' => [
-            'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
+            'cookieValidationKey' => '',
             'csrfParam' => '_csrf-api',
             'class' => 'portalium\web\Request',
             'web'=> '/api/web',
