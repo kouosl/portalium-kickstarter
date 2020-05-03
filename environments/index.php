@@ -32,6 +32,9 @@ return [
             'api/config/main.php',
             'backend/config/main.php',
             'frontend/config/main.php',
+            'api/config/main-local.php',
+            'backend/config/main-local.php',
+            'frontend/config/main-local.php',
         ],
     ],
 ];
