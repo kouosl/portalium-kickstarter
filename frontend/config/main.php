@@ -18,7 +18,7 @@ return [
     'components' => [
         'request' => [
             'class' => 'portalium\web\Request',
-            'cookieValidationKey' => 'Ws_5fvKwQV0EaWpFgpgU0x7aK5BsKfPY',
+            'cookieValidationKey' => '',
             'csrfParam' => '_csrf-frontend',
             'web' => '/frontend/web',
             'aliasUrl' => '',
